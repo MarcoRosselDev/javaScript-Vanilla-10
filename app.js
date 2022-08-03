@@ -36,8 +36,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
@@ -45,3 +43,11 @@ window.addEventListener("scroll", function () {
 });
 // ********** smooth scroll ************
 // select links
+
+const scrollLinks = document.querySelectorAll('.scroll-link');
+
+scrollLinks.forEach(function(link){
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+  });
+});
