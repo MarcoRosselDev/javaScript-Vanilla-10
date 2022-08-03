@@ -23,6 +23,9 @@ navToggle.addEventListener('click', function(){
   }
 })
 // ********** fixed navbar ************
-
+window.addEventListener('scroll', function(){
+  console.log(this.window.pageYOffset);
+  /* awesome, me da la ubicacion del scroll "donde estoy ubicado" para  hacer algo con esa informacion */
+})
 // ********** smooth scroll ************
 // select links
