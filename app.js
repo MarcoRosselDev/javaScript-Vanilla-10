@@ -22,10 +22,14 @@ navToggle.addEventListener('click', function(){
     linksContainer.style.height = 0;
   }
 })
+const navbar = document.getElementById('nav');
+const topLink = document.getElementById('.top-link');
 // ********** fixed navbar ************
 window.addEventListener('scroll', function(){
-  console.log(this.window.pageYOffset);
-  /* awesome, me da la ubicacion del scroll "donde estoy ubicado" para  hacer algo con esa informacion */
+  const scrollHeight = window.pageYOffset;
+  const navHeight = navbar.getBoundingClientRect().height;
+
+  
 })
 // ********** smooth scroll ************
 // select links
