@@ -14,10 +14,13 @@ const links = document.querySelector('.links');
 navToggle.addEventListener('click', function(){
   /* linksContainer.classList.toggle('show-links'); */
   const containerHeight = linksContainer.getBoundingClientRect().height;
-  /* console.log(containerHeight) */
   const linksHeight = links.getBoundingClientRect().height;
-  console.log(linksHeight);
-  /* con esto podemos saber los pixeles de alto que varian segun el numero de links en el nav */
+  
+  if(containerHeight === 0) {
+    linksContainer.styles.height = `${linksHeight}px`;
+  } else {
+    linksContainer.styles.height = 0;
+  }
 })
 // ********** fixed navbar ************
 
