@@ -23,22 +23,24 @@ navToggle.addEventListener('click', function(){
   }
 })
 // ********** fixed navbar ************
-const navbar = document.getElementById('nav');
-const topLink = document.getElementById('.top-link');
-window.addEventListener('scroll', function(){
+const navbar = document.getElementById("nav");
+const topLink = document.querySelector(".top-link");
+window.addEventListener("scroll", function () {
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
-
-  if(scrollHeight > navHeight) {
-    navbar.classList.add('fixed-nav');
+  if (scrollHeight > navHeight) {
+    navbar.classList.add("fixed-nav");
   } else {
-    navbar.classList.remove('fixed-nav');
+    navbar.classList.remove("fixed-nav");
   }
-  // setup back the top link
-  if(scrollHeight > 500) {
-    topLink.classList.add('show-link');
+  // setup back to top link
+
+  if (scrollHeight > 500) {
+    console.log("helo");
+
+    topLink.classList.add("show-link");
   } else {
-    topLink.classList.remove('show-link');
+    topLink.classList.remove("show-link");
   }
 });
 // ********** smooth scroll ************
