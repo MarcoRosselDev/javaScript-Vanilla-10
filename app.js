@@ -22,9 +22,9 @@ navToggle.addEventListener('click', function(){
     linksContainer.style.height = 0;
   }
 })
+// ********** fixed navbar ************
 const navbar = document.getElementById('nav');
 const topLink = document.getElementById('.top-link');
-// ********** fixed navbar ************
 window.addEventListener('scroll', function(){
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
@@ -34,6 +34,12 @@ window.addEventListener('scroll', function(){
   } else {
     navbar.classList.remove('fixed-nav');
   }
-})
+  // setup back the top link
+  if(scrollHeight > 500) {
+    topLink.classList.add('show-link');
+  } else {
+    topLink.classList.remove('show-link');
+  }
+});
 // ********** smooth scroll ************
 // select links
